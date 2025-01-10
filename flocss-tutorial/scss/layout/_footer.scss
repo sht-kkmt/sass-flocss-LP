@@ -1,0 +1,33 @@
+@use "../foundation/variable" as vars;
+
+.l-footer {
+  background-color: vars.$color-black;
+  color: vars.$color-base;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include vars.mq("md") {
+      align-items: center;
+      padding-block: 16px;
+      padding-inline: 10px;
+    }
+  }
+
+  &__lists {
+    font-size: 1rem;
+    display: flex;
+    gap: 10px;
+    padding-block: 5px 24px;
+    @include vars.mq("md") {
+      flex-direction: column;
+      padding-block: 0;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.8rem;
+    padding-bottom: 2px;
+  }
+}
